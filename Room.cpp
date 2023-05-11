@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
-#include <time.h>
+//#include <time.h>
 
 
 #include "Particula.h"
@@ -14,7 +14,7 @@
 #include "Cell_index.h"
 #include "Fuerzas.h"
 #include "mover_verlet.h"
-//#include "mover.h"
+
 
 
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]){
     double frecuencia = 5;
 
     int seed = 44;
-    string path = "./Output2/";
+    string path = "./Output/";
 
 
   if (argc == 18){
@@ -83,7 +83,6 @@ int main(int argc, char *argv[]){
   int num_escrito = 0;
   ofstream t_salidas(path+"Tiempos_salida.txt", ofstream::app);
 
-  //double max_radio = 0.2;
 
   int N;
 
@@ -107,13 +106,13 @@ int main(int argc, char *argv[]){
   int max_pasos = int(max_time/dt);
   cout << int(dt_escritura/dt)<<endl;
   string tiempo_formated;
-  clock_t timer;
-  timer = clock();
+//  clock_t timer;
+ // timer = clock();
   for (int i = 0; i < max_pasos; i++){ //for de pasos temporales
-    //cout << i<<endl;
+    
     vecinos = calcular_vecinos(particulas,W,L);
     mover_particulas(particulas,vecinos,dt, kn, kt, L, W, D,t);
-    //break;
+    
     t += dt;
     cont_escritura++;
 
@@ -131,7 +130,7 @@ int main(int argc, char *argv[]){
       if (particulas[p].get_pos_y() + particulas[p].get_radio() < -L/10){
         reubicar_particula(particulas,p,W,L);
         ya_salidas[p]=0;
-        //particulas[p].set_target_y(0);
+       
 
       }
     }
@@ -147,7 +146,7 @@ int main(int argc, char *argv[]){
   t_salidas.close();
   cout << "Fin" << endl;
 
-  timer = clock() - timer;
-  printf ("%f seconds).\n",((float)timer)/CLOCKS_PER_SEC);
+//  timer = clock() - timer;
+//  printf ("%f seconds).\n",((float)timer)/CLOCKS_PER_SEC);
   return 0;
 }

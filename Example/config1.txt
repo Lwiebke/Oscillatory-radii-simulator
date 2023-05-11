@@ -1,0 +1,17 @@
+kn = 500
+kt = 1000
+L = 150
+W = 20
+D = 2.8
+N = 200
+V_0 = 5
+tau = 1
+masa = 1
+end_time = 20
+dt = 0.0001
+dt_escritura = 1
+radio_base = 1
+amplitud_radio = 0.05
+frecuencia = 20
+seed = 44
+
