@@ -1,7 +1,5 @@
 How to use:
 
-- Compile Room.cpp using g++ 
-
 - Create one or more "config file/s" following the format from the example:
 
 	kn = Normal constant
@@ -21,7 +19,7 @@ How to use:
  	seed = seed to initialize the random number generator
 
 
-- Change "ejecutar.py" to add the path of the binary and the name of the config file/s, and save
+- Edit "ejecutar.py" to add the path of the binary and the name of the config file/s.
 
-- Using python, run "ejecutar.py"
+- Using python3, run "ejecutar.py"
 
