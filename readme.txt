@@ -6,7 +6,7 @@ Those outputs are saved on a dedicated folder for each configuration used.
 
 
 
-Instalation:
+Installation:
 
 Compile the file "Room.cpp" using g++:
 "g++ Room.cpp -o Room.exe"
